@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+
+**/.idea/
+**/*.iml
+**/out/
+**/target/
+
+**/node_modules/
+**/build/
+
+
+**/.env
+**/.env.local
+
+**/src/main/resources/application.properties
