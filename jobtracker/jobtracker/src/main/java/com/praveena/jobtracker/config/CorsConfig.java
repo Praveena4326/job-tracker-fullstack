@@ -12,7 +12,7 @@ public class CorsConfig {
         return new WebMvcConfigurer(){
             @Override
             public void addCorsMappings(CorsRegistry registry){
-                registry.addMapping("/**").allowedOrigins("https://localhost:3000")
+                registry.addMapping("/**").allowedOriginPatterns("http://localhost:3000","https://job-tracker-fullstack-ashen.vercel.app","https://*.vercel.app")
                         .allowedMethods("GET","POST","PUT","DELETE")
                         .allowedHeaders("*");
             }
