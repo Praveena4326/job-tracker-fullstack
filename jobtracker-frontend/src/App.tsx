@@ -31,7 +31,7 @@ function App() {
   setIsLoading(true);
   setLoadError(null);
 
-  fetch('${API_BASE_URL}/applications')
+  fetch(`${API_BASE_URL}/applications`)
     .then((res) => {
       if (!res.ok) throw new Error("Failed to load applications");
       return res.json();
@@ -50,7 +50,7 @@ function App() {
   try {
     const newApp = { companyName, roleTitle, status };
 
-    const res = await fetch('${API_BASE_URL}/applications', {
+    const res = await fetch(`${API_BASE_URL}/applications`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newApp),
@@ -77,7 +77,7 @@ function App() {
 };
 
  const handleDelete = async (id: number) => {
-  const res = await fetch('${API_BASE_URL}/applications/${id}', {
+  const res = await fetch(`${API_BASE_URL}/applications/${id}`, {
     method: "DELETE",
   });
 
@@ -92,7 +92,7 @@ function App() {
 
 const handleStatusChange = async (id:number, newStatus:JobApplication["status"])=>{
 
-  const res = await fetch('${API_BASE_URL}/applications/${id}/status?status=${newStatus}',
+  const res = await fetch(`${API_BASE_URL}/applications/${id}/status?status=${newStatus}`,
     {
       method: "PUT",
     }
