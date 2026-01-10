@@ -153,7 +153,7 @@ const shownCounts={
 };
 
   return (
-  <div className="min-h-screen bg-slate-50">
+  <main className="min-h-screen bg-slate-50">
     <div className="mx-auto max-w-6xl px-4 py-8">
       {/* Header */}
       <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -192,13 +192,13 @@ const shownCounts={
             <form onSubmit={handleSubmit} className="mt-5 space-y-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700">
-                  Company Name <span className="text-slate-400">(required)</span>
+                  Company Name <span className="text-slate-500">(required)</span>
                 </label>
                 <input
                   value={companyName}
                   onChange={(e) => setCompanyName(e.target.value)}
                   placeholder="Amazon"
-                  className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
+                  className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-500 focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
                 />
               </div>
 
@@ -210,15 +210,16 @@ const shownCounts={
                   value={roleTitle}
                   onChange={(e) => setRoleTitle(e.target.value)}
                   placeholder="Software Engineer Intern"
-                  className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
+                  className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-500 focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-700">
+                <label htmlFor="create-status" className="block text-sm font-medium text-slate-700">
                   Status </label>
 
                 <select
+                  id = "create-status"
                   value={status}
                   onChange={(e) => setStatus(e.target.value)}
                   className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
@@ -283,16 +284,17 @@ const shownCounts={
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Company or role..."
-        className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400 focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
+        className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-500 focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
       />
     </div>
 
     <div className="sm:col-span-1">
-      <label className="block text-xs font-medium text-slate-600">Status</label>
+      <label htmlFor="filter-status" className="block text-xs font-medium text-slate-600">Status</label>
       <select
-        value={statusFilter}
-        onChange={(e) => setStatusFilter(e.target.value as any)}
-        className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
+      id ="filter-status"
+      value={statusFilter}
+      onChange={(e) => setStatusFilter(e.target.value as any)}
+      className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
       >
         <option value="ALL">All</option>
         <option value="APPLIED">Applied</option>
@@ -303,8 +305,9 @@ const shownCounts={
     </div>
 
     <div className="sm:col-span-1">
-      <label className="block text-xs font-medium text-slate-600">Sort</label>
+      <label htmlFor="sort-by" className="block text-xs font-medium text-slate-600">Sort</label>
       <select
+        id = "sort-by"
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value as any)}
         className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
@@ -420,7 +423,7 @@ const shownCounts={
   </div>
 ) : null}
 
-  </div>
+  </main>
 );
 
 }
