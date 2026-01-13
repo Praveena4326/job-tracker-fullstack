@@ -1,8 +1,8 @@
-# Job Tracker – Full-Stack Web Application
+# ApplyFlow - Full-Stack Job Application Tracker System
 
 A production-style full-stack web application built to manage and analyze job applications reliably under realistic data loads.
 
-This project was designed and implemented end-to-end, with a focus on correctness, performance, and maintainability rather than just feature completeness.
+ApplyFlow was designed and implemented end-to-end, with a focus on correctness, performance, and maintainability rather than just feature completeness.
 
 ---
 
