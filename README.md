@@ -1,6 +1,6 @@
 # Job Tracker - Full-Stack Web Application
 
-A production-style job application tracking system designed to manage, filter, and analyze job applications at scale.
+A production-style job application tracking system built to manage, filter, and analyze job applications under realistic data loads.
 
 ## Why I Built This
 I built this project to solve my own problem of tracking job applications reliably while learning how full-stack systems behave under realistic data loads and production constraints.
@@ -33,6 +33,6 @@ https://job-tracker-fullstack-ashen.vercel.app/
 
 ## What I Learned
 - Designing REST APIs with validation and error handling
-- Managing frontend state and filtering logic
+- Managing frontend state and implementing efficient filtering logic
 - Deploying and debugging full-stack applications
 - Measuring and validating real-world performance
