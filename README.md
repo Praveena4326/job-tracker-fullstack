@@ -7,7 +7,7 @@ ApplyFlow was designed and implemented end-to-end, with a focus on correctness, 
 ---
 
 ## Why I Built This
-I built this project to solve a real problem I personally faced—tracking job applications at scale—while learning how full-stack systems behave in production environments.
+I built this project to solve a real problem I personally faced, tracking job applications at scale, while learning how full-stack systems behave in production environments.
 
 Instead of treating this as a demo, I focused on building a system that could handle realistic usage, validate inputs correctly, and remain responsive as data grows.
 
