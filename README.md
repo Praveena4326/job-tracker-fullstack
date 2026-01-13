@@ -1,4 +1,4 @@
-# ApplyFlow - Full-Stack Job Application Tracker System
+# ApplyFlow - Full-Stack Job Application Tracking System
 
 A production-style full-stack web application built to manage and analyze job applications reliably under realistic data loads.
 
