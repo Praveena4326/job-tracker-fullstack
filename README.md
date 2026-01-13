@@ -1,9 +1,25 @@
-# Job Tracker - Full-Stack Web Application
+# Job Tracker – Full-Stack Web Application
 
-A production-style job application tracking system built to manage, filter, and analyze job applications under realistic data loads.
+A production-style full-stack web application built to manage and analyze job applications reliably under realistic data loads.
+
+This project was designed and implemented end-to-end, with a focus on correctness, performance, and maintainability rather than just feature completeness.
+
+---
 
 ## Why I Built This
-I built this project to solve my own problem of tracking job applications reliably while learning how full-stack systems behave under realistic data loads and production constraints.
+I built this project to solve a real problem I personally faced—tracking job applications at scale—while learning how full-stack systems behave in production environments.
+
+Instead of treating this as a demo, I focused on building a system that could handle realistic usage, validate inputs correctly, and remain responsive as data grows.
+
+---
+
+## System Overview
+- Frontend handles filtering, sorting, and UI state management
+- Backend exposes REST APIs with validation and structured error handling
+- PostgreSQL provides persistent, relational storage
+- Deployed as a distributed system with independent frontend and backend services
+
+---
 
 ## Tech Stack
 **Frontend:** React, TypeScript, Tailwind CSS  
@@ -11,11 +27,16 @@ I built this project to solve my own problem of tracking job applications reliab
 **Database:** PostgreSQL  
 **Deployment:** Vercel (frontend), Render (backend)
 
-## Key Features
-- Create, update, and delete job applications with input validation
-- Filter and sort applications by status and company
-- RESTful backend API with structured error handling
-- Persistent data storage using PostgreSQL
+---
+
+## Key Engineering Decisions
+- Designed REST APIs with explicit input validation and predictable error responses
+- Chose PostgreSQL for relational consistency and future extensibility
+- Implemented server-side filtering and pagination to support larger datasets
+- Structured frontend state to avoid unnecessary re-renders during filtering
+- Deployed services independently to mirror real-world system separation
+
+---
 
 ## Performance & Validation
 - Tested with 300+ job application records
@@ -23,16 +44,30 @@ I built this project to solve my own problem of tracking job applications reliab
   - Performance: 100
   - Best Practices: 100
   - SEO: 100
-- Performance metrics:
+- Core metrics:
   - LCP: 1.3s
   - TBT: 50ms
   - CLS: 0
 
+---
+
+## What This Project Demonstrates
+- Ability to design and implement full-stack systems end-to-end
+- Experience building RESTful backends with validation and persistence
+- Understanding of frontend state management and performance
+- Comfort deploying, debugging, and maintaining live applications
+- Focus on correctness, testing, and measurable performance
+
+---
+
 ## Live Demo
 https://job-tracker-fullstack-ashen.vercel.app/
 
+---
+
 ## What I Learned
-- Designing REST APIs with validation and error handling
-- Managing frontend state and implementing efficient filtering logic
-- Deploying and debugging full-stack applications
-- Measuring and validating real-world performance
+- Designing APIs that behave predictably under edge cases
+- Debugging issues that only appear after deployment
+- Measuring and improving real-world frontend performance
+- Writing code with maintainability in mind, not just functionality
+
