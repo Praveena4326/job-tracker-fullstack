@@ -197,7 +197,7 @@ const shownCounts={
                 <input
                   value={companyName}
                   onChange={(e) => setCompanyName(e.target.value)}
-                  placeholder="Amazon"
+                  placeholder="Company Name"
                   className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-500 focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
                 />
               </div>
@@ -209,7 +209,7 @@ const shownCounts={
                 <input
                   value={roleTitle}
                   onChange={(e) => setRoleTitle(e.target.value)}
-                  placeholder="Software Engineer Intern"
+                  placeholder="Role Title"
                   className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-500 focus:border-slate-400 focus:ring-4 focus:ring-slate-100"
                 />
               </div>
