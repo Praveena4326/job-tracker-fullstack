@@ -1,6 +1,7 @@
 import { JobApplication, ApplicationStatus } from "../types/JobApplication";
+import { API_BASE_URL } from "../config";
 
-const BASE_URL = "http://localhost:8080/applications";
+const BASE_URL = `${API_BASE_URL}/applications`;
 
 export async function getApplications(): Promise<JobApplication[]> {
   const res = await fetch(BASE_URL);
@@ -36,10 +37,12 @@ export async function updateStatus(
   id: number,
   status: ApplicationStatus
 ): Promise<JobApplication> {
-  const res = await fetch(`${BASE_URL}/${id}/status?status=${status}`, {
+  const res=await fetch(`${BASE_URL}/${id}/status?status=${status}`, {
     method: "PUT",
   });
 
-  if (!res.ok) throw new Error("Failed to update status");
+  if (!res.ok){
+   throw new Error("Failed to update status");
+  }
   return res.json();
 }

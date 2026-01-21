@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
-import { JobApplication, ApplicationStatus } from "./types/JobApplication";
+import { JobApplication } from "./types/JobApplication";
 import { API_BASE_URL } from "./config.ts";
-import {
-  getApplications,
-  createApplication,
-  deleteApplication,
-  updateStatus,
-} from "./services/jobApplicationApi";
 
 
 function App() {
@@ -118,13 +112,6 @@ const statusBadgeClass = (s: JobApplication["status"])=> {
   return "bg-rose-50 text-rose-700 ring-rose-200"; // REJECTED
 };
 
-const counts = {
-  APPLIED: applications.filter((a) => a.status === "APPLIED").length,
-  INTERVIEW: applications.filter((a) => a.status === "INTERVIEW").length,
-  OFFER: applications.filter((a) => a.status === "OFFER").length,
-  REJECTED: applications.filter((a) => a.status === "REJECTED").length,
-};
-
 const filteredApplications = applications.filter((app) => {
   const q = query.trim().toLowerCase();
   const matchesQuery=q === ""||app.companyName.toLowerCase().includes(q) ||(app.roleTitle || "").toLowerCase().includes(q);
@@ -154,6 +141,15 @@ const shownCounts={
 
   return (
   <main className="min-h-screen bg-slate-50">
+    {isLoading ? (
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-700">
+      Loading applications...
+    </div>
+  ) : loadError ? (
+    <div className="rounded-2xl border border-rose-200 bg-rose-50 p-4 text-sm text-rose-700">
+      {loadError}
+    </div>
+) : null}
     <div className="mx-auto max-w-6xl px-4 py-8">
       {/* Header */}
       <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
